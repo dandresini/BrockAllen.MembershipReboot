@@ -13,6 +13,10 @@
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,10 +88,20 @@
     <Compile Include="Query\IUserAccountQuery.cs" />
     <Compile Include="Repository\QueryableGroupRepository.cs" />
     <Compile Include="Repository\QueryableUserAccountRepository.cs" />
+    <Compile Include="Resources\ValidationMessages.it-IT.Designer.cs">
+      <DependentUpon>ValidationMessages.it-IT.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Resources\ValidationMessages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ValidationMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ValidationMessages.ru-ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessages.ru-ru.resx</DependentUpon>
     </Compile>
     <Compile Include="TwoFactorAuthPolicy\CookieBasedTwoFactorAuthPolicy.cs" />
     <Compile Include="Configuration\MembershipRebootConfiguration.cs" />
@@ -165,6 +179,11 @@
     <EmbeddedResource Include="Notification\Email\EmailTemplates\EmailVerifiedEvent_Body.txt" />
     <EmbeddedResource Include="Notification\Email\EmailTemplates\AccountCreatedEvent_Subject.txt" />
     <EmbeddedResource Include="Notification\Email\EmailTemplates\AccountCreatedEvent_Body.txt" />
+    <EmbeddedResource Include="Resources\ValidationMessages.it-IT.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.it-IT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\ValidationMessages.da.resx" />
     <EmbeddedResource Include="Resources\ValidationMessages.de.resx" />
     <EmbeddedResource Include="Resources\ValidationMessages.nl-nl.resx" />
